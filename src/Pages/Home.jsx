@@ -42,7 +42,7 @@ const Home = () => {
           </button>
         </div>
       </div>
-       
+
       {/* Upcoming Appointments */}
       <div className="bg-white rounded-lg shadow-md w-full max-w-4xl mt-8 p-6">
         <h3 className="text-lg font-semibold mb-4">Upcoming Appointments</h3>
