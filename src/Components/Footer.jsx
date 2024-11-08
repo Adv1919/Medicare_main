@@ -1,4 +1,5 @@
 import logo from "../assets/images/logo.png";
+import "./style/Footer.css";
 import { Link } from "react-router-dom";
 import { RiLinkedinFill } from "react-icons/ri";
 import {
@@ -82,9 +83,9 @@ const Footer = () => {
       <div className="container">
         <div className="flex justify-between flex-col md:flex-row flex-wrap gap-[30px]">
           <div>
-          <h1 className="text-indigo-600 text-xl font-semibold">MediCare+</h1>
+            <h1 className="text-indigo-600 text-xl font-semibold">MediCare+</h1>
             <p className="text-[16px] leading-7 font-[400]">
-               Developed By: Anishka, Advika ,Prayag ,Ayush
+              Developed By: Anishka, Advika ,Prayag ,Ayush
             </p>
             <div className="flex items-center gap-3 mt-4">
               {sociallinks.map((link, index) => (

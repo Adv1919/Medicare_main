@@ -1,11 +1,22 @@
-import Layout from "./Layout/Layout";
-import "./Components/style/Header.css";
+import React from "react";
+import "./App.css";
+import Header from "./components/Header";
+import Footer from "./Components/Footer";
+import Hero from "./components/Hero";
+import Features from "./components/Features";
 import "./App.css";
 
-export default function App() {
+const App = () => {
   return (
-    <>
-      <Layout />
-    </>
+    <div className="App">
+      <Header />
+      <main>
+        <Hero />
+        <Features />
+      </main>
+      <Footer />
+    </div>
   );
-}
+};
+
+export default App;
