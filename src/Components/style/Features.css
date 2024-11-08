@@ -1,0 +1,58 @@
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: #e2e8f0;
+}
+
+.feature {
+  text-align: center;
+  width: 30%;
+}
+
+.feature h3 {
+  color: #333;
+}
+
+.feature p {
+  color: #555;
+}
+.feature-cards {
+  display: flex;
+  justify-content: space-around; /* Space the cards evenly */
+  gap: 20px;
+  padding: 40px 20px;
+  margin-top: 40px; /* Add space between hero section and feature cards */
+  flex-wrap: wrap; /* Ensures it looks good on smaller screens */
+}
+
+.feature-card {
+  background-color: #fff; /* White background */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  width: 250px; /* Set the width of each card */
+  text-align: center; /* Center the content inside the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for card depth */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth hover effects */
+  cursor: pointer; /* Pointer cursor to indicate interactivity */
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  color: #333; /* Dark text color for titles */
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: #666; /* Lighter text color for descriptions */
+}
+
+.feature-card:hover {
+  background-color: #f9f9f9; /* Light background on hover */
+  transform: translateY(-5px); /* Card lifts up when hovered */
+}
+
+.feature-card:active {
+  transform: translateY(2px); /* Slightly move down when clicked */
+}
