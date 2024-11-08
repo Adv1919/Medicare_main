@@ -1,17 +1,7 @@
 import { Link } from "react-router-dom";
-import heroImg01 from "../assets/images/hero-img01.png";
-import heroImg02 from "../assets/images/hero-img02.png";
-import heroImg03 from "../assets/images/hero-img03.png";
-import icon01 from "../assets/images/icon01.png";
-import icon02 from "../assets/images/icon02.png";
-import icon03 from "../assets/images/icon03.png";
 import { BsArrowRight } from "react-icons/bs";
 import About from "../About/About";
 import ServicesList from "../Services/ServicesList";
-import featureImg from "../assets/images/feature-img.png";
-import videoIcon from "../assets/images/video-icon.png";
-import avatarIcon from "../assets/images/avatar-icon.png";
-import faqImg from "../assets/images/faq-img.png";
 import DoctorsList from "./Doctors/DoctorsList";
 import FaqItem from "./Faq/FaqItem";
 import Testimonial from "../Components/Testimonial/Testimonial";
@@ -26,19 +16,25 @@ const Home = () => {
         <div className="bg-blue-100 rounded-lg p-6 text-center shadow-md">
           <h2 className="text-lg font-semibold">Book Consultation</h2>
           <button className="mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">
-            Schedule Now
+          <Link to="/doctors" className="  font-medium ">
+            Schedule now
+          </Link>
           </button>
         </div>
         <div className="bg-pink-100 rounded-lg p-6 text-center shadow-md">
           <h2 className="text-lg font-semibold">Order Medicine</h2>
           <button className="mt-4 bg-pink-600 text-white py-2 px-4 rounded-md hover:bg-pink-700">
-            View Pharmacy
+          <Link to="/pharmacy" className=" r font-medium ">
+             View Pharmacies
+          </Link>
           </button>
         </div>
         <div className="bg-blue-100 rounded-lg p-6 text-center shadow-md">
           <h2 className="text-lg font-semibold">Health Articles</h2>
           <button className="mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">
+          <Link to="/healtheducation" className="  font-medium ">
             Browse Content
+          </Link>
           </button>
         </div>
       </div>

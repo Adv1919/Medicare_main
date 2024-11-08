@@ -1,12 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../Pages/Home";
 import Contact from "../Pages/Contact";
-import Pharmacy from "../Pages/pharmacy"
+ 
 import Doctors from "../Pages/Doctors/Doctors";
 import Login from "../Pages/Login";
 import Signup from "../Pages/Signup";
 import Services from "../Pages/Services";
 import DoctorsDetails from "../Pages/Doctors/DoctorsDetails";
+ import HealthEducation from "../Pages/healtheducation";
+ import MapPage from "../Pages/pharmacy"
 
 const Routers = () => {
   return (
@@ -14,8 +16,12 @@ const Routers = () => {
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/pharmacy" element={<Pharmacy />} />
+      <Route path="/pharmacy" element={<MapPage />} />
+      <Route path="/healtheducation" element={<HealthEducation />} />
+      
+       
       <Route path="/doctors" element={<Doctors />} />
+      
       <Route path="/doctors/:id" element={<DoctorsDetails />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
