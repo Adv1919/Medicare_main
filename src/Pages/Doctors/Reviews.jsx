@@ -5,7 +5,7 @@ const Reviews = ({ items }) => {
   const arr = Array.from({ length: items.rating });
   return (
     <div>
-      <div className="flex justify-between gap-10 mb-[30px]">
+      <div className="flex justify-between gap-10 mb-[30px] max-w-7xl ml-64 ">
         <div className="flex-gap-3">
           <figure className="w-10 h-10 rounded-full">
             <img className="w-full" src={items.photo} alt="" />

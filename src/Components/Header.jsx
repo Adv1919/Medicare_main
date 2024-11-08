@@ -18,8 +18,16 @@ const navLinks = [
     display: "Virtual Consultations",
   },
   {
+    path: "/video-call",
+    display: "VideoCall",
+  },
+  {
     path: "/pharmacy",
     display: "Pharmacy",
+  },
+  {
+    path: "/healtheducation",
+    display: "Health Education",
   },
   {
     path: "/contact",
