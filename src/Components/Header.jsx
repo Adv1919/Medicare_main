@@ -4,6 +4,7 @@ import userImg from "../assets/images/avatar-icon.png";
 import { Link, NavLink } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
 import { useEffect, useRef } from "react";
+import LanguageSwitcher from "./LanguageSwitcher";
 const navLinks = [
   {
     path: "/home",
@@ -100,6 +101,7 @@ const Header = () => {
           <button className=" bg-blue-500 py-2 px-6 text-white hover:bg-blue-600 font-[600] h-[44px] flex items-center justify-center rounded-[50px]   ml-2 mt-10">
             Login
           </button>
+          <LanguageSwitcher/>
         </Link>
         <span className="md:hidden" onClick={togglemenu}>
           <BiMenu className="w-6 h-6 cursor-pointer" />

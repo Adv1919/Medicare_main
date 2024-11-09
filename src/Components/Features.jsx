@@ -1,20 +1,22 @@
 import React from "react";
 import "./style/Features.css";
+import { useTranslation } from 'react-i18next';
 
 function Features() {
+  const { t } = useTranslation();
   return (
     <div className="feature-cards">
       <div className="feature-card">
-        <h3>Schedule Appointment</h3>
-        <p>Book your appointments easily.</p>
+        <h3>{t('Line1')}</h3>
+        <p>{t('Line2')}</p>
       </div>
       <div className="feature-card">
-        <h3>Find Pharmacies</h3>
-        <p>Find pharmacies near you easily.</p>
+        <h3>{t('Line3')}</h3>
+        <p>{t('Line4')}</p>
       </div>
       <div className="feature-card">
-        <h3>Health Education</h3>
-        <p>Access health resources and emergency guidelines.</p>
+        <h3>{t('Line5')}</h3>
+        <p>{t('Line6')}</p>
       </div>
     </div>
   );
