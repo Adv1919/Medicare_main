@@ -6,6 +6,7 @@ import Doctors from "../Pages/Doctors/Doctors";
 import Login from "../Pages/Login";
 import Signup from "../Pages/Signup";
 import Services from "../Pages/Services";
+import Image from "../Pages/image";
 import DoctorsDetails from "../Pages/Doctors/DoctorsDetails";
 import HealthEducation from "../Pages/healtheducation";
 import MapPage from "../Pages/pharmacy"
@@ -24,6 +25,7 @@ const Routers = () => {
       <Route path="/doctors" element={<Doctors />} />
       
       <Route path="/doctors/:id" element={<DoctorsDetails />} />
+      <Route path="/image" element={<Image />} />
       <Route path="/VideoCall" element={<VideoCall />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
