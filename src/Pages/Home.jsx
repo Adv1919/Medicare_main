@@ -1,68 +1,66 @@
-import { Link } from "react-router-dom";
-import { BsArrowRight } from "react-icons/bs";
-import About from "../About/About";
-import ServicesList from "../Services/ServicesList";
-import DoctorsList from "./Doctors/DoctorsList";
-import FaqItem from "./Faq/FaqItem";
-import Testimonial from "../Components/Testimonial/Testimonial";
-import useTitle from "../Hooks/useTitle";
+import React from 'react';
+
 const Home = () => {
-  useTitle("Home");
+  const features = [
+    {
+      title: "Schedule Appointment",
+      description: "Book your appointments easily.",
+    },
+    {
+      title: "Find Pharmacies",
+      description: "Find pharmacies near you easily.",
+    },
+    {
+      title: "Health Education",
+      description: "Access health resources and emergency guidelines.",
+    }
+  ];
+
   return (
-    <>
-       <div className="bg-blue-50 min-h-screen p-10 flex flex-col items-center">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
-        {/* Top Buttons */}
-        <div className="bg-blue-100 rounded-lg p-6 text-center shadow-md">
-          <h2 className="text-lg font-semibold">Book Consultation</h2>
-          <button className="mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">
-          <Link to="/doctors" className="  font-medium ">
-            Schedule now
-          </Link>
-          </button>
-        </div>
-        <div className="bg-pink-100 rounded-lg p-6 text-center shadow-md">
-          <h2 className="text-lg font-semibold">Order Medicine</h2>
-          <button className="mt-4 bg-pink-600 text-white py-2 px-4 rounded-md hover:bg-pink-700">
-          <Link to="/pharmacy" className=" r font-medium ">
-             View Pharmacies
-          </Link>
-          </button>
-        </div>
-        <div className="bg-blue-100 rounded-lg p-6 text-center shadow-md">
-          <h2 className="text-lg font-semibold">Health Articles</h2>
-          <button className="mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">
-          <Link to="/healtheducation" className="  font-medium ">
-            Browse Content
-          </Link>
-          </button>
+    <div className="min-h-screen bg-gradient-to-r from-orange-200 to-yellow-200">
+      {/* Hero Section */}
+      <div className="container mx-auto px-4 pt-8 pb-16">
+        <div className="flex flex-col lg:flex-row items-center justify-between">
+          <div className="lg:w-1/2 mb-8 lg:mb-0">
+            <h1 className="text-4xl lg:text-5xl font-light text-gray-800 mb-4">
+              Medicare+
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Providing easy access to healthcare and emergency services.
+            </p>
+            <button className="bg-blue-400 hover:bg-blue-500 text-white font-medium py-3 px-8 rounded-md transition duration-300">
+              Book an Appointment
+            </button>
+          </div>
+          <div className="lg:w-1/2 flex justify-center">
+            <img
+              src="/api/placeholder/500/600"
+              alt="Doctor"
+              className="w-96 object-cover"
+            />
+          </div>
         </div>
       </div>
 
-      {/* Upcoming Appointments */}
-      <div className="bg-white rounded-lg shadow-md w-full max-w-4xl mt-8 p-6">
-        <h3 className="text-lg font-semibold mb-4">Upcoming Appointments</h3>
-         
-      </div>
-
-      {/* Prescriptions and Health Metrics */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mt-8">
-        {/* Recent Prescriptions */}
-        <div className="bg-pink-100 rounded-lg p-6 shadow-md">
-          <h3 className="text-lg font-semibold mb-4">Recent Prescriptions</h3>
-          <div className="bg-pink-200 rounded-md p-4 mb-2"> </div>
-          <div className="bg-pink-200 rounded-md p-4"> </div>
-        </div>
-
-        {/* Health Metrics */}
-        <div className="bg-blue-100 rounded-lg p-6 shadow-md">
-          <h3 className="text-lg font-semibold mb-4">Health Metrics</h3>
-          <div className="bg-blue-200 rounded-md p-4 mb-2"> </div>
-          <div className="bg-blue-200 rounded-md p-4"> </div>
+      {/* Features Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-lg p-8 transform hover:-translate-y-1 transition duration-300"
+            >
+              <h3 className="text-xl font-medium text-gray-800 mb-4">
+                {feature.title}
+              </h3>
+              <p className="text-gray-600">
+                {feature.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
-    </>
   );
 };
 

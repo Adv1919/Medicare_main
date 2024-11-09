@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 
-mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
+mapboxgl.accessToken = 'pk.eyJ1IjoiYXl1c2gyMDA0IiwiYSI6ImNtMzlhNXlrZzB1YzUyaXF3aXBteml6YWYifQ.UE6LGRjWQ6OPdQvsQcuGgw';
 
 const MapPage = () => {
   const [map, setMap] = useState(null);
